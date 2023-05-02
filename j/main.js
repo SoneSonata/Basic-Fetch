@@ -37,3 +37,12 @@ fetch("https://www.colr.org/json/color/random")
     .then((data) => {
         document.body.style.backgroundColor = `#${data.new_color}`;
     })
+    /*document.addEventListener('DOMContentLoaded', init);
+
+    async function init() {
+        let kingdom = await fetch("houses.json");
+        let world = await kingdom.json();
+        try {
+
+        }
+    }*/
