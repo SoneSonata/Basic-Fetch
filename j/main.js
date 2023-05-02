@@ -19,8 +19,8 @@ fetch("houses.json")
 
             // generate the html snippet for one array item
             //to be added to the "html" temp holder.
-            let objInfo = `<p class="house">${house.name}</p>
-        <p class="folks">${family}</p>`;
+            let objInfo = `<dl><dt class="house">${house.name}</dt>
+        <dd class="folks">${family}</dd></dl>`;
             html += objInfo;
         });
 
@@ -31,3 +31,9 @@ fetch("houses.json")
     })
     .catch((err) => console.log("Oops!", err));
     //this only runs if there is an error during the above process
+
+fetch("https://www.colr.org/json/color/random")
+    .then((response) => response.json())
+    .then((data) => {
+        document.body.style.backgroundColor = `#${data.new_color}`;
+    })
